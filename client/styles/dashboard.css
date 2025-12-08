@@ -1,0 +1,192 @@
+.dash-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.dash-header p {
+  color: var(--text-muted);
+}
+
+.table-section {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  padding: 20px;
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.45);
+}
+
+.events-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+
+.events-table th,
+.events-table td {
+  padding: 12px;
+  border-bottom: 1px solid #242436;
+}
+
+.events-table th {
+  text-align: left;
+  color: var(--accent-secondary);
+  font-weight: 600;
+}
+
+.action-btn {
+  border: none;
+  padding: 6px 14px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-size: .85rem;
+  font-weight: 600;
+  transition: .25s;
+}
+
+.action-edit {
+  background: #3478f6;
+  color: white;
+}
+
+.action-delete {
+  background: #ff4b4b;
+  color: white;
+}
+
+.action-btn:hover {
+  tra/* ================= ADMIN DASHBOARD ================= */
+
+.dash-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.dash-header p {
+  color: var(--text-muted);
+}
+
+/* TABLE WRAPPER */
+
+.table-section {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  padding: 18px;
+}
+
+.events-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.events-table th,
+.events-table td {
+  padding: 10px;
+  border-bottom: 1px solid #25253a;
+}
+
+.events-table th {
+  text-align: left;
+  color: var(--accent-2);
+  font-weight: 600;
+}
+
+/* ACTION BUTTONS */
+
+.action-btn {
+  border: none;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  cursor: pointer;
+  font-weight: 600;
+  margin-right: 6px;
+  transition: 0.2s ease;
+}
+
+.action-edit {
+  background: #3478f6;
+  color: #fff;
+}
+
+.action-edit:hover {
+  filter: brightness(1.1);
+}
+
+.action-delete {
+  background: var(--danger);
+  color: #fff;
+}
+
+.action-delete:hover {
+  filter: brightness(1.1);
+}
+
+/* ================= ADD / UPDATE EVENT FORM ================= */
+
+.event-form {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;      /* IMPORTANT: vertical layout */
+  gap: 12px;
+  box-shadow: var(--shadow);
+}
+
+.event-form input,
+.event-form textarea,
+.event-form select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--bg-dark);
+  color: var(--text-main);
+  font-size: 0.9rem;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+.event-form textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.event-form input:focus,
+.event-form textarea:focus,
+.event-form select:focus {
+  border-color: var(--accent-2);
+}
+
+/* FILE INPUT LABEL */
+
+.file-label {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* MESSAGE TEXT */
+
+.form-message {
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+/* OPTIONAL: PREVIEW IMAGE STYLE (if you add <img id="previewImg">) */
+#previewImg {
+  width: 260px;
+  margin-top: 10px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  display: none;
+}
+nsform: translateY(-2px);
+}

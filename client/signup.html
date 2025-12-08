@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Signup | EventureX</title>
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+
+
+  <link rel="stylesheet" href="styles/global.css">
+  <link rel="stylesheet" href="styles/auth.css">
+</head>
+
+<body class="auth-body">
+  <div class="auth-container">
+    <div class="auth-box">
+      <h1 class="brand-title">EventureX</h1>
+      <p class="tagline">Join and explore opportunities that shape your future</p>
+
+      <form id="signupForm" class="auth-form">
+        <div class="input-group">
+          <input type="text" id="firstName" required placeholder=" " />
+          <label>First Name</label>
+        </div>
+
+        <div class="input-group">
+          <input type="text" id="lastName" required placeholder=" " />
+          <label>Last Name</label>
+        </div>
+
+        <div class="input-group">
+          <input type="email" id="email" required placeholder=" " />
+          <label>Email Address</label>
+        </div>
+
+        <div class="input-group">
+          <input type="password" id="password" required placeholder=" " />
+          <label>Password</label>
+        </div>
+
+        <button type="submit" class="neon-btn">Create Account</button>
+      </form>
+
+      <p class="switch-link">
+        Already have an account?
+        <a href="login.html" class="switch-btn">Login</a>
+      </p>
+    </div>
+  </div>
+
+  <div id="toast" class="toast"></div>
+
+  <script type="module" src="js/auth.js"></script>
+</body>
+</html>

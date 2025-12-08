@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EventureX | Student Dashboard</title>
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+
+
+  <link rel="stylesheet" href="styles/global.css">
+  <link rel="stylesheet" href="styles/cards.css">
+</head>
+<body class="app-body">
+  <div id="navbar"></div>
+
+  <main class="page-container">
+    <section class="small-hero">
+      <h1>
+        Welcome to <span style="color:var(--accent-2); font-weight:600;">EventureX</span>,
+        <span id="studentName">Student</span> 👋
+      </h1>
+      <p>Discover hackathons, workshops, seminars & cultural events happening across campus.</p>
+    </section>
+
+    <section>
+      <h2 class="section-title">🚀 Upcoming Events</h2>
+      <p style="color:var(--text-muted); margin-bottom:10px;">
+        Stay up to date with opportunities and never miss your chance to participate.
+      </p>
+      <div id="eventsContainer" class="card-grid"></div>
+    </section>
+  </main>
+
+  <script type="module">
+    const name = localStorage.getItem("name");
+    if (name) {
+      document.getElementById("studentName").textContent = name;
+    }
+  </script>
+  <script type="module" src="js/role.js"></script>
+  <script type="module" src="js/events.js"></script>
+</body>
+</html>

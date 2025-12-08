@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EventureX - College Event & Opportunity Hub</title>
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+
+
+  <link rel="stylesheet" href="styles/global.css">
+  <link rel="stylesheet" href="styles/home.css">
+</head>
+
+<body class="app-body">
+  <div id="navbar"></div>
+
+  <section class="hero">
+    <div id="particles-js"></div>
+    <div class="hero-content">
+      <h1 class="hero-title">Welcome to <span class="highlight">EventureX</span></h1>
+      <p class="hero-subtitle">
+        Discover hackathons, workshops, bootcamps and campus events that help you grow,
+        build your skills, and shape your future.
+      </p>
+      <button class="cta-btn" onclick="window.location.href='login.html'">Get Started</button>
+    </div>
+  </section>
+
+  <section class="trending-section">
+    <h2 class="section-title">🔥 Trending Events</h2>
+    <p class="trend-subtitle">Most active and upcoming opportunities on your campus</p>
+
+    <div class="slider-container">
+      <button class="slide-btn" id="slideLeft">‹</button>
+      <div class="slider" id="trendingSlider"></div>
+      <button class="slide-btn" id="slideRight">›</button>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 EventureX • Built for Students, by Students</p>
+  </footer>
+
+  <script src="js/role.js" type="module"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>
