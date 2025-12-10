@@ -1,26 +1,19 @@
-import nodemailer from "nodemailer";
-import dotenv from "dotenv";
-dotenv.config();
+// server/src/utils/sendEmail.js
+import { Resend } from "resend";
 
-export const sendEmail = async (to, subject, message) => {
+const resend = new Resend(process.env.RESEND_API_KEY);
+
+export const sendEmail = async (to, subject, text) => {
   try {
-    const transporter = nodemailer.createTransport({
-      service: "gmail",
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
-      },
-    });
-
-    await transporter.sendMail({
-      from: process.env.EMAIL_USER,
+    await resend.emails.send({
+      from: "EventureX <onboarding@resend.dev>",
       to,
       subject,
-      text: message,
+      text,
     });
 
-    console.log("📩 Email sent successfully");
-  } catch (error) {
-    console.error("Email sending failed:", error);
+    console.log("Email sent successfully via Resend");
+  } catch (err) {
+    console.error("Email sending failed:", err);
   }
 };
