@@ -3,24 +3,30 @@ import { API_BASE } from "./config.js";
 const signupForm = document.getElementById("signupForm");
 const loginForm = document.getElementById("loginForm");
 
-// SIGNUP
+// ---------------- SIGNUP ----------------
 if (signupForm) {
   signupForm.addEventListener("submit", async (e) => {
     e.preventDefault();
 
     const firstName = document.getElementById("firstName").value.trim();
     const lastName = document.getElementById("lastName").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value.trim();
 
-    const userData = {
-      name: `${firstName} ${lastName}`,
-      email: document.getElementById("email").value.trim(),
-      password: document.getElementById("password").value.trim(),
-    };
+    if (!firstName || !lastName || !email || !password) {
+      alert("All fields are required");
+      return;
+    }
 
     const res = await fetch(`${API_BASE}/auth/signup`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(userData),
+      body: JSON.stringify({
+        firstName,
+        lastName,
+        email,
+        password,
+      }),
     });
 
     const data = await res.json();
@@ -32,18 +38,18 @@ if (signupForm) {
   });
 }
 
-// LOGIN
+// ---------------- LOGIN ----------------
 if (loginForm) {
   loginForm.addEventListener("submit", async (e) => {
     e.preventDefault();
 
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value.trim();
+
     const res = await fetch(`${API_BASE}/auth/login`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        email: document.getElementById("email").value.trim(),
-        password: document.getElementById("password").value.trim(),
-      }),
+      body: JSON.stringify({ email, password }),
     });
 
     const data = await res.json();
